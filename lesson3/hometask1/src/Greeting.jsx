@@ -5,9 +5,9 @@ const Greeting = props => {
   const yearsOld = date => moment().diff(date, 'years');
 
   return (
-    <div className="greeting">{`My name is ${props.user.firstName} ${
-      props.user.lastName
-    }. I am ${yearsOld(props.user.birthDate)} years old`}</div>
+    <div className="greeting">{`My name is ${props.firstName} ${props.lastName}. I am ${yearsOld(
+      props.birthDate,
+    )} years old`}</div>
   );
 };
 
