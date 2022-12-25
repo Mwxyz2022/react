@@ -12,14 +12,11 @@ body {
 #root {
   height: 100vh;
   display: flex;
-  background-color: #000;
-}
-.container {
-  display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-end;
+  background-color: #000;
 }
+
 .profile__name {
   text-align: center;
   width: 100vw;
@@ -27,6 +24,7 @@ body {
   color: rgba(255, 255, 255, 0.549);
 }
 .profile__birth {
+  text-align: right;
   color: rgba(192, 161, 60, 0.434);
   font-size: 30px;
 }
