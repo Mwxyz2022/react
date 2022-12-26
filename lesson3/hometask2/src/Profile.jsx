@@ -2,12 +2,13 @@ import React from 'react';
 import moment from 'moment';
 
 const Profile = props => {
-  const formatDate = moment(props.userDate.birthDate).format('DD MMM YYYY');
+  console.log(props);
+  const formatDate = moment(props.userData.birthDate).format('DD MMM YYYY');
 
   return (
     <>
-      <div className="profile__name">{`${props.userDate.firstName} ${props.userDate.lastName}`}</div>
-      <div className="profile__birth">{`Was born ${formatDate} in ${props.userDate.birthPlace}`}</div>
+      <div className="profile__name">{`${props.userData.firstName} ${props.userData.lastName}`}</div>
+      <div className="profile__birth">{`Was born ${formatDate} in ${props.userData.birthPlace}`}</div>
     </>
   );
 };
