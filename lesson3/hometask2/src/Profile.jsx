@@ -2,8 +2,7 @@ import React from 'react';
 import moment from 'moment';
 
 const Profile = props => {
-  console.log(props);
-  const formatDate = moment(props.userData.birthDate).format('DD MMM YYYY');
+  const formatDate = moment(props.userData.birthDate).format('DD MMM YY');
 
   return (
     <>
