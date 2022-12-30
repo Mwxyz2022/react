@@ -28,20 +28,20 @@ class ColorPicker extends Component {
   render() {
     return (
       <div>
-        <div class="picker__title">{this.state.colorName}</div>
+        <div className="picker__title">{this.state.colorName}</div>
         <div>
           <button
-            class="picker__button picker__button_coral"
+            className="picker__button picker__button_coral"
             onMouseOver={() => this.over(CORAL)}
             onMouseOut={() => this.out(CORAL)}
           ></button>
           <button
-            class="picker__button picker__button_aqua"
+            className="picker__button picker__button_aqua"
             onMouseOver={() => this.over(AQUA)}
             onMouseOut={() => this.out(CORAL)}
           ></button>
           <button
-            class="picker__button picker__button_bisque"
+            className="picker__button picker__button_bisque"
             onMouseOver={() => this.over(BISQUE)}
             onMouseOut={() => this.out(CORAL)}
           ></button>
