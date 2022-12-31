@@ -3,12 +3,12 @@ import Offline from './Offline';
 import Online from './Online';
 
 class Status extends Component {
-  state = {
-    isOnline: true,
-  };
+  constructor(props) {
+    super(props);
+  }
 
   render() {
-    return <div className="status">{this.state.isOnline ? <Online /> : <Offline />}</div>;
+    return <div className="status">{this.props.isOnline ? <Online /> : <Offline />}</div>;
   }
 }
 
