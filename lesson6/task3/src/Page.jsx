@@ -18,6 +18,7 @@ class Page extends Component {
   render() {
     return (
       <div className="page">
+        <Info info={this.state.info} />
         <div className="actions">
           <button className="btn" onClick={() => this.setText(info1)}>
             IPhone 13
@@ -29,7 +30,6 @@ class Page extends Component {
             Clear
           </button>
         </div>
-        <Info info={this.state.info} />
       </div>
     );
   }
