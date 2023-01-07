@@ -1,6 +1,6 @@
 import React from 'react';
-import NumberList from './NumberList.jsx';
+import NumbersList from './NumbersList.jsx';
 
-const App = props => <NumberList numbers={props.numbers} />;
+const App = props => <NumbersList numbers={props.numbers} />;
 
 export default App;
