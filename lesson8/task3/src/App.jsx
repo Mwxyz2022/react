@@ -1,5 +1,5 @@
 import React from 'react';
-import Dimensions from './Demensions';
+import Dimensions from './Dimensions';
 
 const App = () => <Dimensions />;
 
