@@ -7,18 +7,17 @@ const Dimensions = () => {
     })
 
     useEffect(() => {
-        const { innerHeight, innerWidth } = window
+        const { innerWidth, innerHeight } = window
         setDimensions({ width: innerWidth, height: innerHeight })
-
-        const handleResize = e => {
-            const { innerWidth, innerHeight } = e.target
+        const handleResize = event => {
+            const { innerWidth, innerHeight } = event.target
             setDimensions({ width: innerWidth, height: innerHeight })
         }
         window.addEventListener('resize', handleResize)
         return () => {
             window.removeEventListener('resize', handleResize)
         }
-    })
+    }, [])
 
     const { width, height } = dimensions
     return <div className="dimensions">{`${width}px - ${height}px`}</div>
