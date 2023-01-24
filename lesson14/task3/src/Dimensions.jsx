@@ -5,13 +5,22 @@ const Dimensions = () => {
         width: null,
         height: null,
     })
-    const { width, height } = dimensions
 
     useEffect(() => {
         const { innerHeight, innerWidth } = window
         setDimensions({ width: innerWidth, height: innerHeight })
+
+        const handleResize = e => {
+            const { innerWidth, innerHeight } = e.target
+            setDimensions({ width: innerWidth, height: innerHeight })
+        }
+        window.addEventListener('resize', handleResize)
+        return () => {
+            window.removeEventListener('resize', handleResize)
+        }
     })
 
+    const { width, height } = dimensions
     return <div className="dimensions">{`${width}px - ${height}px`}</div>
 }
 
