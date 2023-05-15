@@ -1,5 +1,14 @@
-import React from 'react';
+import { useId } from 'react'
 
-const App = () => <div>Hello, React!</div>;
-
-export default App;
+function PasswordField() {
+    const passwordHintId = useId()
+    return (
+        <>
+            <label>
+                Password:
+                <input type="password" aria-describedby={passwordHintId} />
+            </label>
+            <p id={passwordHintId}>The password should contain at least 18 characters</p>
+        </>
+    )
+}
